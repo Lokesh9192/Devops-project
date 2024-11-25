@@ -19,9 +19,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source> <!-- Updated to Java 17 -->
-        <maven.compiler.target>17</maven.compiler.target> <!-- Updated to Java 17 -->
-        <java.version>17</java.version> <!-- Updated to Java 17 -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <java.version>17</java.version>  <!-- Set the Java version to 17 -->
     </properties>
 
     <dependencies>
@@ -55,22 +55,15 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- Corrected maven-compiler-plugin version -->
+            <!-- Updated Maven Compiler Plugin Version -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Correct version -->
+                <version>3.10.1</version>  <!-- Latest version for better compatibility -->
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
-            </plugin>
-
-            <!-- Sonar Maven Plugin with a newer version -->
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>4.0.0.4121</version> <!-- Using version compatible with Java 17 -->
             </plugin>
         </plugins>
     </build>
